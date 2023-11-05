@@ -13,6 +13,18 @@ notes.get('/', (req, res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
+notes.get('/:title', (req, res) => {
+    const tipId = req.params.title;
+    readFromFile('./db/db.json')
+      .then((data) => JSON.parse(data))
+      .then((json) => {
+        const result = json.filter((note) => note.title === title);
+        return result.length > 0
+          ? res.json(result)
+          : res.json('No note with that title');
+      });
+  });
+
 // delete specific note by its title
 notes.delete('/:title', (req, res) => {
     const title = req.params.title;
