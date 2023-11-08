@@ -6,7 +6,8 @@ This project allows the user to enter notes with a title and note text. It also 
 
 Github Repo: https://github.com/whitbreezy/note-taker
 
-App Deployed via Heroku:
+App Deployed via Heroku: https://peaceful-badlands-58405-a2b39c56ddb2.herokuapp.com/
+
 
 
 ## Installation
